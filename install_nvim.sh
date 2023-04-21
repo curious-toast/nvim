@@ -61,7 +61,6 @@ done
 
 #cloning latest neovim from official repo
 git clone --branch "release-0.8" https://github.com/neovim/neovim.git "$NEOVIM_DIR"
-#git switch release-0.8
 
 #checks for file existance
 [ -e /usr/local/bin/nvim ] && sudo rm -f /usr/local/bin/nvim
@@ -76,7 +75,7 @@ cd "$CURRENT_DIR" || terminate_script "Error: not able to change directory to \"
 rm -rf "$NEOVIM_DIR"
 
 #Sometimes permissions get messed up when installing from source, so we set the current user permissions here.
-nvim_dirs=(~/.cache/nvim ~/.local/share/nvim)
-for dir in "${nvim_dirs[@]}"; do
-	sudo find "$dir" -not -user "$USER" -exec chown -R "$USER" {} \;
-done
+# nvim_dirs=(~/.cache/nvim ~/.local/share/nvim)
+# for dir in "${nvim_dirs[@]}"; do
+# 	sudo find "$dir" -not -user "$USER" -exec chown -R "$USER" {} \;
+# done

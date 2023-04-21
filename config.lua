@@ -1,3 +1,4 @@
+reload "user.lsp"
 reload "user.plugins"
 reload "user.options"
 reload "user.spectre"
